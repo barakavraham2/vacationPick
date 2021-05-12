@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap");
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.regisrt {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100%;
+  padding: 5rem;
+}
+
+.regisrtPage {
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-image: url("images/registren2P.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.homePage {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/backgroundMainPage.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.LogIn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 50%;
+  background-color: rgba(70, 68, 68, 0.2);
+  height: auto;
+  padding: 5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.LogInPage {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/registrenP.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.navbar {
+  background-color: rgb(76, 76, 175) !important;
+}
+.navbar-brand {
+  color: white;
+}
+.nav-link {
+  color: white;
+}
+
+.cardImg {
+  height: 15rem;
+}
+.card {
+  flex-basis: 26% !important;
+  margin-top: 10px;
+}
+.cardBody {
+  font-family: "Open Sans", sans-serif;
+  justify-self: center;
+  height: 20rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.LikeVacationButton {
+  border: none;
+  background-color: transparent;
+}
+.LikeVacationButtonAfterClicked {
+  border: none;
+  background-color: transparent;
+  color: red;
+}
+
+.LikeIcon {
+  /*  background-color: red; */
+}
+.button-card {
+  border: none;
+  background-color: transparent;
+}
+
+.vacationConitanier {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgba(212, 212, 238, 0.3);
+  height: auto;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  margin-top: 3rem;
+}
+@media (max-width: 800px) {
+  .vacationConitanier {
+    flex-direction: column;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  .serachForm {
+    flex-direction: column;
+  }
+  .banner-heading {
+    font-size: 2px;
+  }
+}
+
+@media (max-width: 426px) {
+  .LogIn {
+    background-color: rgba(70, 68, 68, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0;
+    width: 100%;
+    position: static;
+  }
+
+  .LogInPage {
+    width: 100%;
+    height: auto;
+    background-image: url("images/registrenP.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+  .regisrt {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+  .form-row {
+    display: inline-block !important;
+  }
+}
+.input-group {
+  display: flex;
+  flex-direction: row;
+  top: 2rem;
+  left: 20%;
+}
+.serachForm {
+  display: inline-flex;
+}
+.form-control {
+  margin: 0px;
+  border-right: 3rem;
+}
+#searchButtens {
+  /*   margin-right: 1px; */
+  margin-left: 2px;
+}
+.popOutAddVacation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popOutEditVacation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.deleteVacationContiner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.addVacationInner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+}
+.deleteVacation {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+}
+
+.addVcButton {
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.cardBody::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent !important;
+}
+
+.cardBody::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(104, 140, 240, 0.3);
+}
+
+.cardBody::-webkit-scrollbar-thumb {
+  background-color: rgb(163, 163, 163);
+  opacity: 0.4;
+}
+
+.banner {
+  color: rgb(19, 18, 18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 0;
+  animation: anim 2s;
+}
+
+.banner-paragraph {
+  font-size: 2rem;
+  font-weight: 300;
+  animation: anim 1.5s 0.5s backwards;
+}
+.banner-paragraph2 {
+  font-size: 1rem;
+  font-weight: 300;
+  animation: anim 2s 0.5s backwards;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
