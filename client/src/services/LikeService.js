@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const apiEndPoint = 'http://localhost:3002/api/like/addlike'
-const apiFind = 'http://localhost:3002/api/like/'
+const apiEndPoint = 'https://glacial-taiga-22070.herokuapp.com/api/like/addlike'
+const apiFind = 'https://glacial-taiga-22070.herokuapp.com/api/like/'
 export async function addLike(like, user) {
     console.log(like, user)
     return axios.post(apiEndPoint, {
@@ -12,6 +12,12 @@ export async function addLike(like, user) {
 
 export async function findLikes(id) {
     const howmany = await axios.get(apiFind + id)
+    return howmany.data
+
+}
+
+export async function findLikesByUser(id) {
+    const howmany = await axios.get(apiFind + 'byuser/' + id)
     return howmany.data
 
 }

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const apiEndPoint = 'http://localhost:3002/api/users/adduser'
-const apiLogin = 'http://localhost:3002/auth/login'
+const apiEndPoint = 'https://glacial-taiga-22070.herokuapp.com/api/users/adduser'
+const apiLogin = 'https://glacial-taiga-22070.herokuapp.com/auth/login'
 const axiosConfig = {
     headers: {
         'Content-Type': 'application/json',

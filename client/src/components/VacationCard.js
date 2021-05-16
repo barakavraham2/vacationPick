@@ -19,6 +19,7 @@ function VacationCard({ vacation, user, userRole }) {
                 const likes = await findLikes(vacation.id)
                 const found = (element) => element.user === user;
                 const findIfLiked = likes.some(found)
+
                 if (findIfLiked) {
                     setLikeButton('LikeVacationButtonAfterClicked')
                 }

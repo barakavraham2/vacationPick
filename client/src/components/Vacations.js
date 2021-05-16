@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Card, CardDeck, Button } from 'react-bootstrap'
-import { getVacations } from '../services/vacationService'
+import { getVacations, getOneVacation } from '../services/vacationService'
 import jwt_decode from 'jwt-decode'
 import VacationCard from './VacationCard'
 import Addvacation from './Addvacation'
 import Icon from 'awesome-react-icons'
+import { findLikes, findLikesByUser } from '../services/LikeService'
 
-export default function Vacations() {
+export default function Vacations(props) {
     const [vacations, setVacations] = useState([])
     const [user, setUser] = useState('')
     const [openAdd, setOpenAdd] = useState(false)
@@ -14,19 +15,41 @@ export default function Vacations() {
     const [start, setStart] = useState()
     const [end, setEnd] = useState()
     const [serch, setSerchResult] = useState()
+    const [IfLiked, SetIfLiked] = useState([])
+    const [Liked, setLiked] = useState([])
     useEffect(() => {
         async function fetcData() {
             const res = await getVacations()
+            console.log(props.user.id)
+            const likes = await findLikesByUser(props.user.id)
+            console.log(res.data)
             setVacations(res.data)
+            SetIfLiked(likes)
+            likes.forEach(async item => {
+
+                const r = await getOneVacation(item.vacation)
+                setLiked(...r)
+                console.log(Liked)
+            })
         }
         fetcData()
+
+
         try {
             const jwt = localStorage.getItem('token')
             const decode = jwt_decode(jwt)
             setUser(decode)
+            /*           async function findLikesr(vacationId) {
+                          const likes = await findLikes(vacationId)
+                          const found = (element) => element.user === user.id;
+                          const findIfLiked = likes.some(found)
+                          SetIfLiked(findIfLiked)
+                      } */
         }
         catch (err) { }
+
     }, [])
+
 
 
     function hendleSerch() {
@@ -36,7 +59,6 @@ export default function Vacations() {
 
             }
         })
-        console.log(serch)
     }
 
     async function handleReturn() {

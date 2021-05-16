@@ -15,7 +15,7 @@ function Home(props) {
         catch (err) { }
     }, [])
 
-    return (user) ? (<Vacations />) : <HomePage />
+    return (user) ? (<Vacations user={user} />) : <HomePage />
 
 }
 
